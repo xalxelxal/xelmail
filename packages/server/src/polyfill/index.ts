@@ -1,7 +1,5 @@
 /* oxlint-disable unicorn/no-new-buffer */
 if (typeof Buffer === 'undefined') {
-    // oxlint-disable-next-line typescript/ban-ts-comment
-    // @ts-expect-error
     globalThis.Buffer = class Buffer extends ArrayBuffer {
         constructor(bufferOrLength: ArrayBuffer | number) {
             if (bufferOrLength instanceof ArrayBuffer) {
